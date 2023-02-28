@@ -40,6 +40,8 @@ supported_bms_types = [
     {"bms": Renogy, "baud": 9600, "address": b"\x30"},
     {"bms": Renogy, "baud": 9600, "address": b"\xF7"},
     {"bms": Ecs, "baud": 19200},
+    {"bms": HLPdataBMS4S, "baud": 9600, "address": b"\x40"},
+   # {"bms": HLPdataBMS4S, "baud": 9600},
 ]
 expected_bms_types = [
     battery_type
