@@ -28,6 +28,7 @@ from jkbms import Jkbms
 from renogy import Renogy
 from ecs import Ecs
 from lifepower import Lifepower
+from hlpdatabms4s import HLPdataBMS4S
 
 supported_bms_types = [
     {"bms": LltJbd, "baud": 9600},
