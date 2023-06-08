@@ -224,7 +224,7 @@ def read_serialport_data2(ser, command, time, min_len):
             ser.write(b"\n")
             sleep(1)
         cnt = 0
-        while cnt < 3:
+        while cnt < 30:
             cnt += 1
             ser.flushOutput()
             #sleep(time)
