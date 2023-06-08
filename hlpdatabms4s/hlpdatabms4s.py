@@ -65,7 +65,7 @@ class HLPdataBMS4S(Battery):
         #    logger.info(f'> CCCM T {CCCM_T_ENABLE} | DCCM T {DCCM_T_ENABLE}')
         #    logger.info(f'> MIN_CELL_VOLTAGE {MIN_CELL_VOLTAGE}V | MAX_CELL_VOLTAGE {MAX_CELL_VOLTAGE}V')
 
-        return
+        #return
 
     def read_test_data(self):
         test_data = self.read_serial_data_HLPdataBMS4S(b"pv\n", 1, 12)
