@@ -227,13 +227,13 @@ def read_serialport_data2(ser, command, time, min_len):
         while cnt < 3:
             cnt += 1
             ser.flushOutput()
-            sleep(time)
+            #sleep(time)
             ser.flushInput()
             ser.write(command)
             sleep(time)
             res = ser.read(1000)
-            logger.info("HLPdataBMS4S returned: ")
-            logger.info(res)           
+            #logger.info("HLPdataBMS4S returned: ")
+            #logger.info(res)           
             if len(res) >= min_len:
                 return res
         return False
