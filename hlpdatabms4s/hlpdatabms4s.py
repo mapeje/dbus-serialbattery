@@ -68,8 +68,6 @@ class HLPdataBMS4S(Battery):
         return
 
     def read_test_data(self):
-        ser.write(b"\n")
-        sleep(1)
         test_data = self.read_serial_data_HLPdataBMS4S(b"pv\n", 1, 15)
         if test_data is False:
             return False
@@ -222,6 +220,9 @@ def read_serial_data2(command, port, baud, time, min_len):
 
 def read_serialport_data2(ser, command, time, min_len):
     try:
+        if min_len == 15:
+            ser.write(b"\n")
+            sleep(1)
         cnt = 0
         while cnt < 3:
             cnt += 1
