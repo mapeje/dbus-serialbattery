@@ -73,6 +73,8 @@ class HLPdataBMS4S(Battery):
             return False
         s1 = str(test_data)
         ix = s1.find("BMS4S")
+        logger.info("HLPdataBMS4S ix: ")
+        logger.info(ix)
         if ix > 0:
             self.hardware_version = s1[ix : len(s1) - 1]
             self.version = self.hardware_version
